@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Natural Garden</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+        body {
+  margin-top: 20px;
+}
+
+ /* Bootstrap resets */
+ p{
+  font-size: medium;
+ }
+.card {
+  box-shadow:3px 3px 3px grey;
+  border: none;
+}
+.card-img {
+  border-radius: 0;
+}
+
+.vgr-cards {
+  .card {
+    display: flex;
+    flex-flow: wrap;
+    flex: 100%;
+    margin-bottom: 40px;
+
+    &:nth-child(even) .card-img-body {
+      order: 2;
+    }
+
+    &:nth-child(even) .card-body {
+      padding-left: 0;
+      padding-right: 1.25rem; 
+    }
+    
+    @media (max-width: 576px) {
+      display: block;
+    }
+    
+  }
+  .card-text{
+    color: #515151
+  }
+
+  .card-img-body {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    
+    @media (max-width: 576px) {
+      width: 100%;
+      height: 200px;
+          margin-bottom: 20px;
+    }
+    
+  }
+  
+  .card-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+    @media (max-width: 1140px) {
+          margin: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    }
+    
+  }
+
+  .card-body {
+    flex: 2;
+    padding: 0 0 0 1.25rem;
+    
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+    
+  }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="img/LOGO (2).png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="./shop.html" class="nav-item nav-link">Shop</a>
+                       
+                        <a href="./feedback.html" class="nav-item nav-link">Feedback</a>
+                       
+                        <a href="blogs2.html" class="nav-item nav-link">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class='col-xs-12 col-sm-12 col-md-4 col-lg-4' style="width: 12rem; height: 2rem; margin-right: -5rem;">
+
+                      <form class='navbar-form'>
+                        <div class='input-group'>
+                          <input class='form-control' type='text' name='search' placeholder='Search Here..' />
+                          <span class="input-group-btn">
+                            <button type='submit' class='btn btn-default'>
+                              <span class='glyphicon glyphicon-search'></span>
+                              <i class="fas fa-search"></i>
+                             
+                            </button>
+                            <i class="bi bi-cart-check-fill bi-lg" style=" font-size: 22px; "></i>
+                            
+                              <span style="font-size: 9px; margin-top: 5px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                2+
+                                <span class="visually-hidden">unread messages</span>
+                              </span>
+                            
+                          </span>
+              
+                        </div>
+                      </form>
+              
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-dark mb-4 animated slideInDown">BLOGS</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                   
+                    <li class="breadcrumb-item text-dark" aria-current="page">Blogs</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <p class="fs-5 fw-medium fst-italic text-primary">Blogs</p>
+        <h1 class="display-6">PLANTS.. <br/> LIFE SUPPORT!</h1>
+    </div>
+
+     
+ 
+ 
+</div>
+</div>
+
+<div data-aos="fade-up" class="container">
+<div class="card-group vgr-cards">
+<!-- blog 3 -->
+<div class="card">
+<div  data-aos="flip-up" class="card-img-body" style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/lemon (2).jpg" alt="Card image " style="height: 300px; " >
+</div>
+<div class="card-body">
+  <h1 data-aos="fade-right" class="card-title">LEMON PLANT</h1><hr>
+  <p data-aos="fade-up" class="card-text">Lemon plants, scientifically known as Citrus limon, are small to medium-sized evergreen plants known for their tart, yellow fruits and fragrant blossoms. Here's some information about lemon plants. Lemon plants typically have glossy, dark green leaves and produce white, fragrant flowers with five petals. The flowers are often followed by small, green fruits that ripen to a bright yellow color when mature.When growing a lemon plant, it's important to consider the specific climate and conditions of your location, as lemon trees have specific requirements for successful cultivation. Proper care, including watering, fertilization, and pest control, will help ensure the health and productivity of your lemon plant.</p>
+  
+</div>
+
+</div>
+
+<!-- blog 4 -->
+<div class="card">
+<div data-aos="flip-up" class="card-img-body"  style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+  <img class="card-img" src="img/oregano-2662890_1280.jpg" alt="Card image cap"  style="height: 300px; " ></div>
+<div class="card-body">
+  <h1 data-aos="fade-right" class="card-title">ORIGANUM PLANT</h1><hr>
+  <p  data-aos="fade-up" class="card-text">Origanum, commonly known as oregano, is a genus of aromatic herbs and culinary spices that belong to the Lamiaceae family. Oregano is well-known for its flavorful leaves that are widely used in cooking, particularly in Mediterranean and Italian cuisines. Here's some information about the oregano plant: Oregano plants typically have small, oval-shaped leaves that are green and aromatic. They can grow as compact mounds or spread out as ground cover. Oregano also produces small clusters of white to pink flowers.Whether you're growing oregano for its culinary uses, aromatic qualities, or potential health benefits, it's a versatile and flavorful herb that can be a valuable addition to your garden or kitchen.</p>
+ 
+</div>
+</div>
+
+
+</div>
+</div>
+
+<div data-aos="fade-up" class="container">
+<div class="card-group vgr-cards">
+<!-- blog 5 -->
+<div class="card">
+<div  data-aos="flip-up" class="card-img-body" style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/ajwain-6470987_1280.jpg" alt="Card image " style="height: 300px; " >
+</div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title">AJWAIN PLANT</h1><hr>
+<p data-aos="fade-up" class="card-text">Ajwain, scientifically known as Trachyspermum ammi or Carum copticum, is a plant that is commonly used for its culinary and medicinal properties. It is native to regions in Asia, including India, Iran, and Egypt. Here are some key aspects about the ajwain plant Ajwain is a small, erect, annual herb that grows up to 2 feet in height. It has feathery, green leaves that are divided into narrow segments. The plant produces small white flowers that are often tinged with pink or lavender. Ajwain has been traditionally used in Ayurvedic and Unani medicine for its potential health benefits. Ajwain is often consumed after meals to promote digestion. It is believed to stimulate the release of gastric juices and enzymes, which can help break down food and improve overall digestion. </p>
+
+</div>
+</div>
+
+<!-- blog 6 -->
+<div class="card">
+<div data-aos="flip-up" class="card-img-body"  style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/senecio.jpg" alt="Card image cap"  style="height: 300px; " ></div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title">SENECIO PLANT</h1><hr>
+<p  data-aos="fade-up" class="card-text">Senecio is a large and diverse genus of flowering plants in the daisy family, Asteraceae. It contains a wide variety of species, many of which are commonly referred to as "senecios." These plants are known for their often attractive foliage and flowers, but some species can be toxic if ingested. Here are some key points about the Senecio plant The Senecio genus includes a wide range of plant types, including annuals, perennials, succulents, and shrubs. Some popular members of the Senecio genus include Senecio rowleyanus, Senecio serpens, and Senecio cineraria. Many senecio species are succulents, meaning they have fleshy leaves adapted to store water. These plants are often prized for their unique and interesting foliage, which can range from round, bead-like leaves to elongated, finger-like leaves.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div data-aos="fade-up" class="container">
+<div class="card-group vgr-cards">
+<!-- blog 7 -->
+<div class="card">
+<div  data-aos="flip-up" class="card-img-body" style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/cactus-8127922_1280.jpg" alt="Card image " style="height: 300px; " >
+</div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title">CACTUS PLANT</h1><hr>
+<p data-aos="fade-up" class="card-text">Cactus plants are a diverse group of succulent plants that are well-known for their unique appearance, water-storing capabilities, and adaptability to arid environments. Cactus plants are a diverse group of succulent plants that are well-known for their unique appearance, water-storing capabilities, and adaptability to arid environments. When growing cacti, it's important to provide them with the right conditions. They generally require well-draining soil, ample sunlight, and infrequent but thorough watering. Overwatering can be detrimental to cacti, as they are adapted to survive with minimal moisture. It's also essential to research the specific care requirements of the cactus species you are growing, as different types may have slightly different needs </p>
+
+</div>
+</div>
+
+<!-- blog 8 -->
+<div class="card">
+<div data-aos="flip-up" class="card-img-body"  style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/opalina.jpg" alt="Card image cap"  style="height: 300px; " ></div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title">OPALINA PLANT</h1><hr>
+<p  data-aos="fade-up" class="card-text">Opalina An attractive and durable succulent plant that produces clustes of tight rosettes to 4 to 6 inches wide by 6 to 8 inches tall with thick smooth, upright-held pale blue-green leaves that have a hint of pink tones on the leaf tips and margins when grown in bright light.As a succulent plant, the water needs of Opalina are quite low compared to most other plants because this plant hails from a region that is constantly hot and dry. To give this plant species proper care, you should allow its soil to dry out completely between waterings.Lacking a mouth, opalines feed by taking in nutrients from their surroundings by pinocytosis.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div data-aos="fade-up" class="container">
+<div class="card-group vgr-cards">
+<!-- blog 9 -->
+<div class="card">
+<div  data-aos="flip-up" class="card-img-body" style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/aloe-vera-1045_640.jpg" alt="Card image " style="height: 300px; " >
+</div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title">ALOE VERA PLANT</h1><hr>
+<p data-aos="fade-up" class="card-text">Aloe vera (Aloe barbadensis miller) is a well-known succulent plant that has been used for its medicinal and cosmetic properties for centuries. It is native to North Africa and certain parts of the Arabian Peninsula but is now cultivated and grown in various regions around the world.  Aloe vera is a succulent plant with thick, fleshy leaves that store water. This adaptation allows it to survive in arid and dry conditions.Aloe vera gel contains vitamins, minerals, amino acids, and enzymes that are believed to contribute to its potential health benefits when applied externally or ingested in small amounts.  However, it's important to note that consuming aloe vera latex can have adverse effects and should be avoided.</p>
+
+</div>
+</div>
+
+<!-- blog 10 -->
+<div class="card">
+<div data-aos="flip-up" class="card-img-body"  style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/water-lilies-1442497_1280.jpg" alt="Card image cap"  style="height: 300px; " ></div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title">LILY PLANT</h1><hr>
+<p  data-aos="fade-up" class="card-text">Lily" is a term that encompasses a wide variety of flowering plants belonging to the genus Lilium. Lilies are known for their elegant and often fragrant blooms, making them popular choices for gardens, bouquets, and floral arrangements. They can vary in size, shape, color, and fragrance. Common types of lilies include Asiatic lilies, Oriental lilies, Trumpet lilies, Easter lilies, and Daylilies, among others.Lilies typically produce large, showy flowers with six petals that can form an open or trumpet-like shape, depending on the species. Lily plants usually have tall, erect stems that bear the flowers. Some lilies can grow quite tall, making them striking focal points in the garden. Lilies are popular choices for cut flower arrangements due to their beauty and fragrance. </p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div data-aos="fade-up"  class="container">
+<div class="card-group vgr-cards">
+<!-- blog 11 -->
+<div class="card">
+<div  data-aos="flip-up" class="card-img-body" style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/fiddle leaf.jpg" alt="Card image " style="height: 300px; " >
+</div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title"> FIDDLE LEAF FIG-PLANT</h1><hr>
+<p data-aos="fade-up" class="card-text"> It sounds like you might be referring to the "Fiddle Leaf Fig" plant (Ficus lyrata). The Fiddle Leaf Fig is a popular indoor plant known for its large, glossy leaves and striking appearance.  The Fiddle Leaf Fig has large, violin or fiddle-shaped leaves that are dark green. The leaves are often quite broad and can grow up to a foot (30 cm) or more in length. Its unique foliage makes it a favorite choice for interior decoration.The Fiddle Leaf Fig is commonly used as a houseplant and is prized for its aesthetic value. It adds a touch of tropical elegance to indoor spaces. Fiddle Leaf Figs can grow quite tall when provided with proper care. They can reach heights of several feet indoors, making them ideal as floor plants or in larger containers. </p>
+
+</div>
+</div>
+
+<!-- blog 12 -->
+<div class="card">
+<div data-aos="flip-up" class="card-img-body"  style="height:300px; box-shadow:7px 7px 7px grey; border-radius: 10px;">
+<img class="card-img" src="img/boston.jpg" alt="Card image cap"  style="height: 300px; " ></div>
+<div class="card-body">
+<h1 data-aos="fade-right" class="card-title">BOSTON FERN PLANT</h1><hr>
+<p  data-aos="fade-up" class="card-text">The Boston Fern (Nephrolepis exaltata) is a popular and classic choice for indoor and outdoor fern enthusiasts. It is known for its lush, feathery fronds and elegant appearance.  Boston Ferns are native to tropical and subtropical regions around the world, including South America, Central America, Africa, and parts of Southeast Asia. Boston Ferns have arching fronds that can grow up to 2-3 feet in length. The fronds are composed of numerous small leaflets that give them a delicate and airy appearance.Remember that while Boston Ferns are relatively forgiving, they do require proper care to thrive. Adjusting the environment and providing the right conditions will help you enjoy the beauty of these elegant ferns in your home or garden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-primary mb-4">Our Office</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Defence phase 5, Karachi,Pakistan</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+92 3346548761</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>naturalgarden12.com</p>
+                <div class="d-flex pt-3">
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-primary mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="./about.html">About Us</a>
+                <a class="btn btn-link" href="./contact.html">Contact Us</a>
+                <a class="btn btn-link" href="./shop.html">shop</a>
+                <a class="btn btn-link" href="./porfolio.html">Portfolio</a>
+                <a class="btn btn-link" href="./feedback.html">feedback</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-primary mb-4">Working Hours</h4>
+                <p class="mb-1">Monday - Friday</p>
+                <h6 class="text-light">09:00 am - 012:00 pm</h6>
+                <p class="mb-1">Saturday</p>
+                <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                <p class="mb-1">Sunday</p>
+                <h6 class="text-light">Closed</h6>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-primary mb-4">Newsletter</h4>
+                <p>Subscribe to our newsletter and get 10% off your first purchase</p>
+                <div class="position-relative w-100">
+                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+
+</html>
